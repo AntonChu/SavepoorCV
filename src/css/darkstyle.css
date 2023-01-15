@@ -15,7 +15,6 @@
     font-family: "Fontawesome", sans-serif;
     text-transform: capitalize;
     box-sizing: border-box;
-    color: #ffffff;
     -ms-overflow-style: none;
 }
 
@@ -43,7 +42,6 @@ ul, ol {
 a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
 }
 
 span {
@@ -54,6 +52,82 @@ a:hover,
 button:hover,
 select:hover {
     cursor: pointer;
+}
+
+.input-field,
+.fixed-menu,
+.main,
+.brief-unit,
+.promting,
+.promting-map,
+.mission,
+.partners,
+.subscription,
+.testimonials,
+.fact-description,
+.donat,
+.address-form,
+.field {
+    background-color: #ffffff;
+}
+
+
+.body,
+.popup-wrapper,
+.main-radius,
+.brief-facts,
+.missions-goals,
+.welcome,
+.save,
+.carousel-item,
+.volunteer-empty,
+.contact,
+.donations {
+    background-color: #f8f9fa;
+}
+
+a,
+h2,
+h4 {
+    color: #3b3663;
+}
+
+.text,
+.promting-form-title,
+.gray-text {
+    color: #686686;
+}
+
+.fixed-menu,
+.brief-unit,
+.brief-unit:hover,
+.mission:hover,
+.donat:hover,
+.mission,
+.carousel-item,
+.donat,
+.field  {
+    box-shadow: 1px 2px 5px 3px rgba(1, 1, 1, 0.1);
+}
+
+.dark-background {
+    background-color: #212121;
+}
+
+.black-background {
+    background-color: #171717;
+}
+
+.white-color-text {
+    color: #ffffff;
+}
+
+.gray-color-text {
+    color: #b9b9b9;
+}
+
+.dark-shadow  {
+    box-shadow: 1px 2px 5px 3px rgba(150, 150, 150, 0.2);
 }
 
 /* ***popup*** */
@@ -80,7 +154,6 @@ select:hover {
     flex-wrap: wrap;
     max-width: 600px;
     padding: 50px 50px;
-    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px 4px rgba(150, 150, 150, 0.3);
 }
@@ -132,44 +205,12 @@ select:hover {
     padding: 96px 30px;
 }
 
-.input-field,
-.fixed-menu,
-.main,
-.brief-unit,
-.promting,
-.promting-map,
-.mission,
-.partners,
-.subscription,
-.testimonials,
-.fact-description,
-.donat,
-.address-form,
-.field {
-    background-color: #212121;
-}
-
-.body,
-.popup-wrapper,
-.main-radius,
-.brief-facts,
-.missions-goals,
-.welcome,
-.save,
-.carousel-item,
-.volunteer-empty,
-.contact,
-.donations {
-    background-color: #171717;
-}
-
 .fixed-menu {
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px 2px rgba(150, 150, 150, 0.2);
 }
 
 .fixed-menu-flex,
@@ -236,16 +277,24 @@ select:hover {
     background-repeat: no-repeat;
 }
 
-.search-button:hover {
-    background-image: url(../images/search_icon-orange.svg);
-}
-
 .light-mode-button {
     background-image: url(../images/light.png);
 }
 
 .light-mode-button:hover {
     background-image: url(../images/lightorange.png);
+}
+
+.dark-mode-button {
+    background-image: url(../images/moon.png);
+}
+
+.dark-mode-button:hover {
+    background-image: url(../images/moonorange.png);
+}
+
+.search-button:hover {
+    background-image: url(../images/search_icon-orange.svg);
 }
 
 .button-text-hidden,
@@ -287,23 +336,32 @@ select:hover {
     font-size: 18px;
 }
 
+.page {
+    display: none;
+}
+
+.page-active {
+    display: initial;
+}
+
 .main-theme {
     display: none;
 }
 
 .main-active,
+.main-theme-lateral,
 .help {
     background-color: #3b3663;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .main-active {
     height: calc(100vh - 142px);
-    display: flex;
-    align-items: center;
 }
 
 .main-theme-one {
@@ -323,11 +381,14 @@ select:hover {
 }
 
 .main-active,
-.main-theme::after {
-    border-radius: 0 0 50% 50% / 0 0 20px 20px;
+.main-theme-lateral,
+.main-theme::after,
+.main-theme-lateral::after  {
+    border-radius: 0 0 50% 50% / 0 0 30px 30px;
 }
 
 .main-active::after,
+.main-theme-lateral::after,
 .help::after,
 .partner-unit-link::after {
     content: "";
@@ -387,7 +448,6 @@ select:hover {
     border: 1px solid #f8f9fa;
     border-radius: 8px;
     transition: 0.3s;
-    box-shadow: 1px 1px 5px 2px rgba(150, 150, 150, 0.05);
 }
 
 .brief-unit:hover,
@@ -430,7 +490,6 @@ select:hover {
 .text {
     font-size: 18px;
     line-height: 28px;
-    color: #b9b9b9;
     text-transform: none;
 }
 
@@ -507,7 +566,6 @@ select:hover {
 .promting-form-title {
     font-size: 18px;
     font-weight: 600;
-    color: #b9b9b9;
 }
 
 .help {
@@ -628,7 +686,6 @@ select:hover {
     display: flex;
     text-align: left;
     transition: 0.3s;
-    box-shadow: 1px 1px 5px 1px rgba(150, 150, 150, 0.05);
 }
 
 .mission:not(:nth-child(3n)) {
@@ -1035,7 +1092,6 @@ select:hover {
     margin: 0 15px;
     width: 42%;
     text-align: start;
-    box-shadow: 1px 2px 5px 1px rgba(150, 150, 150, 0.1);
 }
 
 .text-element::before {
@@ -1113,7 +1169,6 @@ select:hover {
     text-align: start;
     border-radius: 15px;
     transition: 0.3s;
-    box-shadow: 1px 1px 5px 1px rgba(150, 150, 150, 0.05);
 }
 
 .thesis-hight {
@@ -1249,7 +1304,6 @@ progress::-webkit-progress-bar {
     border-radius: 8px;
     font-size: 18px;
     width: 100%;
-    box-shadow: 1px 1px 5px 1px rgba(150, 150, 150, 0.05);
 }
 
 .textarea-form {
@@ -1263,9 +1317,4 @@ progress::-webkit-progress-bar {
 
 .contact-button {
     margin-left: auto;
-}
-
-.light {
-    background-color: #2d2d2d;
-    color: #ffffff;
 }

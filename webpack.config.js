@@ -30,15 +30,8 @@ module.exports = {
       template: './src/index.html',
       filename: 'main.html',
     }),
-    new HtmlWebpackPlugin({
-      template: './src/about.html',
-      filename: 'maina.html',
-    }),
     new MiniCssExtractPlugin({
-
       filename: 'main.css',
-      
     }),
   ],
 };
-  
